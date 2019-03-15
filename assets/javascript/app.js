@@ -9,4 +9,36 @@
   };
   firebase.initializeApp(config);
 
+  var trainDatabase = firebase.daabase();
+
+  // Button for adding the next train
+
+  $("#train-button"),on("click", function(event){
+    event.preventDefault();
+
+    var trainName = $("train-name").val().trim();
+    var trainDestination = $("train-destination").val().trim();
+    var trainFrequency = $("train-frequency").val().trim();
+    var nextArrival = $("train-next-arrival").val().trim();
+    var trainMinAway = $("minutes-away").val().trim();
+  })
+
+  // Empty array to hold variables before pushing them to the database
+
+  var trainVars = {
+    trainName,
+    trainDestination,
+    trainFrequency,
+    nextArrival,
+    trainMinAway
+  };
+
+  // Push to Database
+
+  database.ref().push(trainVars);
+  console.log(trainVars.trainName);
+  console.log(trainVars.trainDestinatin);
+  console.log(trainVars.trainFrequency);
+  console.log(trainVars.nextArrival);
+  console.log(trainVars.trainMinAway);
   
