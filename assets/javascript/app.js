@@ -42,3 +42,11 @@
   console.log(trainVars.nextArrival);
   console.log(trainVars.trainMinAway);
   
+  var newEntry = $("<tr>").text(trainName),
+    var $("<tr>").text(trainName),
+    var $("<tr>").text(trainDestination),
+    var $("<tr>").text(trainFrequency),
+    var $("<tr>").text(nextArrival),
+    var $("<tr>").text(trainName),
+  );
+
