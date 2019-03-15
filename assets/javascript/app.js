@@ -50,3 +50,4 @@
     var $("<tr>").text(trainName),
   );
 
+$("#train-table > tbody").append.(newRow);
