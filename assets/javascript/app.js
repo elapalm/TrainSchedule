@@ -20,11 +20,11 @@ $(document).ready(function () {
   $("#train-button"), on("click", function (event) {
     event.preventDefault();
     //use let to create variables 
-    trainName = $("train-name").val().trim();
-    trainDestination = $("train-destination").val().trim();
-    trainFrequency = $("train-frequency").val().trim();
-    nextArrival = $("train-next-arrival").val().trim();
-    trainMinAway = $("minutes-away").val().trim();
+    var trainName = $("train-name").val().trim();
+    var trainDestination = $("train-destination").val().trim();
+    var trainFrequency = $("train-frequency").val().trim();
+    var nextArrival = $("train-next-arrival").val().trim();
+    var trainMinAway = $("minutes-away").val().trim();
       });
 
     // Push to Database
