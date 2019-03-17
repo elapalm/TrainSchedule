@@ -15,7 +15,7 @@
           <p class="lead"></p>
         </div>
       </div>
-
+<!--Train schedule table-->
       <table class="train-table">
         <thead>
           <tr>
@@ -30,30 +30,30 @@
 
         </tbody>
       </table>
-
+<!--input form-->
       <form>
   <div class="form-group">
-    <label for="formGroupExampleInput">Train Name</label>
-    <input type="text" class="form-control" id="trainNameInput" placeholder="">
+    <label for="train-name">Train Name</label>
+    <input type="text" class="form-control" id="train-name" placeholder="">
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput2">Destination</label>
-    <input type="text" class="form-control" id="destinationInput" placeholder="">
+    <label for="train-destination">Destination</label>
+    <input type="text" class="form-control" id="train-destination" placeholder="">
   </div>
+  <div class="form-group">
+    <label for="train-frequency">Frequency</label>
+    <input type="text" class="form-control" id="train-frequency" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="first-time">First Train Time (HH:mm military time)</label>
+    <input type="text" class="form-control" id="first-time" placeholder="">
+  </div>
+
 </form>
-        <form>
-  <div class="form-group">
-    <label for="formGroupExampleInput">First Train Time (HH:mm military time)</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-  </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">Frequency</label>
-    <input type="text" class="form-control" id="frequencyInput" placeholder="">
-  </div>
-</form>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" id="train-button">Submit</button>
         </form>
     </div>
+    <!--JavaScript, Firebase and jQuery-->
     <script src="assets/javascript/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>

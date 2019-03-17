@@ -1,3 +1,6 @@
+// ADD DOCUMENT.READY!!!!!!
+$(document).ready(function () {
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBGm-3rFsQ16L3VjOqwR3mKtVrkd_QopnQ",
@@ -9,45 +12,46 @@
   };
   firebase.initializeApp(config);
 
-  var trainDatabase = firebase.daabase();
+  var database = firebase.database();
+
 
   // Button for adding the next train
 
-  $("#train-button"),on("click", function(event){
+  $("#train-button"), on("click", function (event) {
     event.preventDefault();
+    //use let to create variables 
+    trainName = $("train-name").val().trim();
+    trainDestination = $("train-destination").val().trim();
+    trainFrequency = $("train-frequency").val().trim();
+    nextArrival = $("train-next-arrival").val().trim();
+    trainMinAway = $("minutes-away").val().trim();
 
-    var trainName = $("train-name").val().trim();
-    var trainDestination = $("train-destination").val().trim();
-    var trainFrequency = $("train-frequency").val().trim();
-    var nextArrival = $("train-next-arrival").val().trim();
-    var trainMinAway = $("minutes-away").val().trim();
-  })
 
-  // Empty array to hold variables before pushing them to the database
+    // Push to Database
 
-  var trainVars = {
-    trainName,
-    trainDestination,
-    trainFrequency,
-    nextArrival,
-    trainMinAway
-  };
+    database.ref().push({
+      trainName: trainName,
+      trainDestination: trainDestination,
+      trainFrequency: trainFrequency,
+      nextArrival: nextArrival,
+      trainMinAway: trainMinAway,
+    });
 
-  // Push to Database
+    console.log(trainVars.trainName);
+    console.log(trainVars.trainDestination);
+    console.log(trainVars.trainFrequency);
+    console.log(trainVars.nextArrival);
+    console.log(trainVars.trainMinAway);
 
-  database.ref().push(trainVars);
-  console.log(trainVars.trainName);
-  console.log(trainVars.trainDestinatin);
-  console.log(trainVars.trainFrequency);
-  console.log(trainVars.nextArrival);
-  console.log(trainVars.trainMinAway);
-  
-  var newEntry = $("<tr>").text(trainName),
-    var $("<tr>").text(trainName),
-    var $("<tr>").text(trainDestination),
-    var $("<tr>").text(trainFrequency),
-    var $("<tr>").text(nextArrival),
-    var $("<tr>").text(trainName),
-  );
+    var newEntry = $("<tr>").text(trainName);
+    $("<tr>").text(trainName),
+      $("<tr>").text(trainDestination),
+      $("<tr>").text(trainFrequency),
+      $("<tr>").text(nextArrival),
+      $("<tr>").text(trainName),
 
-$("#train-table > tbody").append.(newRow);
+
+    $("#train-table > tbody").append(newRow);
+  });
+});
+
