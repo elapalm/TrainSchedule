@@ -25,7 +25,7 @@ $(document).ready(function () {
     trainFrequency = $("train-frequency").val().trim();
     nextArrival = $("train-next-arrival").val().trim();
     trainMinAway = $("minutes-away").val().trim();
-
+      });
 
     // Push to Database
 
@@ -52,6 +52,5 @@ $(document).ready(function () {
 
 
     $("#train-table > tbody").append(newRow);
-  });
 });
 
