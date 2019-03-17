@@ -13,7 +13,12 @@ $(document).ready(function () {
   firebase.initializeApp(config);
 
   var database = firebase.database();
-
+  
+  var trainName = "";
+  var trainDestination = "";
+  var trainFrequency = 0;
+  var nextArrival = 0;
+  var trainMinAway = 0;
 
   // Button for adding the next train
 
