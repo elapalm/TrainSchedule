@@ -25,17 +25,20 @@ $(document).ready(function () {
     var trainFrequency = $("train-frequency").val().trim();
     var nextArrival = $("train-next-arrival").val().trim();
     var trainMinAway = $("minutes-away").val().trim();
-
-
-    // Push to Database
-
-    database.ref().push({
+    
+    var trainInput = {
       trainName: trainName,
       trainDestination: trainDestination,
       trainFrequency: trainFrequency,
       nextArrival: nextArrival,
       trainMinAway: trainMinAway,
-    });
+    };
+
+
+    // Push to Database
+
+    database.ref().push(trainInfo);
+
 
     console.log(trainVars.trainName);
     console.log(trainVars.trainDestination);
