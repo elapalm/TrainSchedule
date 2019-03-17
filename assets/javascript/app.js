@@ -17,7 +17,7 @@ $(document).ready(function () {
 
   // Button for adding the next train
 
-  $("#train-button"), on("click", function (event) {
+  $("#train-button").on("click", function (event) {
     event.preventDefault();
     //use let to create variables 
     var trainName = $("train-name").val().trim();
